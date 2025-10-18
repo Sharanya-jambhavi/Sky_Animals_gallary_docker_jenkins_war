@@ -1,0 +1,249 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Sky Air Lines — Welcome</title>
+    <meta name="description" content="Sky Air Lines — book flights, manage reservations, and fly with comfort." />
+
+    <style>
+        :root{
+            --accent:#0ea5a4;
+            --dark:#04263a;
+            --muted:#6b7280;
+            --bg:#f8fafc;
+            --card:#ffffff;
+            --radius:12px;
+            font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+        }
+        html,body{height:100%}
+        body{
+            margin:0;
+            background:linear-gradient(180deg, #e6f7fb 0%, var(--bg) 60%);
+            color:var(--dark);
+            -webkit-font-smoothing:antialiased;
+            -moz-osx-font-smoothing:grayscale;
+            line-height:1.4;
+        }
+
+        header{
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            gap:16px;
+            padding:20px 28px;
+            max-width:1100px;
+            margin:0 auto;
+        }
+        .brand{
+            display:flex;
+            gap:12px;
+            align-items:center;
+            text-decoration:none;
+            color:inherit;
+        }
+        .logo{
+            width:46px;height:46px;border-radius:10px;
+            background:linear-gradient(135deg,#06b6d4,#2563eb);
+            display:grid;place-items:center;color:white;font-weight:700;
+            box-shadow:0 6px 18px rgba(9,30,66,0.08);
+        }
+        nav a{margin-left:18px;color:var(--muted);text-decoration:none;font-weight:600}
+        nav a.primary{color:var(--dark)}
+
+        main{max-width:1100px;margin:12px auto;padding:20px;display:grid;gap:22px}
+
+        .hero{
+            display:grid;
+            grid-template-columns:1fr 420px;
+            gap:28px;
+            align-items:center;
+        }
+        .hero-card{
+            background:transparent;
+            padding:30px 10px;
+        }
+        h1{font-size:34px;margin:0 0 8px}
+        p.lead{color:var(--muted);margin:0 0 18px}
+
+        .badge{
+            display:inline-flex;
+            gap:10px;
+            align-items:center;
+            background:linear-gradient(90deg, rgba(14,165,164,0.12), rgba(37,99,235,0.08));
+            color:var(--accent);
+            padding:8px 12px;border-radius:999px;font-weight:700;font-size:13px;
+            margin-bottom:14px;
+            width:max-content;
+        }
+
+        .search-card{
+            background:var(--card);
+            padding:18px;
+            border-radius:var(--radius);
+            box-shadow:0 8px 30px rgba(2,6,23,0.06);
+            border: 1px solid rgba(9,30,66,0.04);
+        }
+        form .row{display:flex;gap:10px;margin-bottom:10px}
+        label{font-size:12px;color:var(--muted);display:block;margin-bottom:6px}
+        input[type="text"],input[type="date"],select{
+            width:100%;
+            padding:10px 12px;border-radius:8px;border:1px solid #e6edf3;background:#fff;
+            font-size:14px;color:var(--dark);
+        }
+        .btn{
+            display:inline-flex;align-items:center;gap:8px;
+            background:var(--accent);color:white;padding:12px 16px;border-radius:10px;border:0;font-weight:700;cursor:pointer;
+            box-shadow:0 8px 20px rgba(14,165,164,0.18);
+        }
+        .muted{color:var(--muted);font-size:13px}
+
+        .features{display:flex;gap:12px;flex-wrap:wrap;margin-top:6px}
+        .feature{background:white;padding:12px;border-radius:12px;flex:1;min-width:180px;border:1px solid rgba(9,30,66,0.04)}
+        .feature h4{margin:0 0 6px;font-size:15px}
+        .feature p{margin:0;color:var(--muted);font-size:13px}
+
+        footer{
+            max-width:1100px;margin:20px auto;padding:18px 20px;color:var(--muted);font-size:13px;
+            display:flex;justify-content:space-between;align-items:center;gap:20px;
+        }
+
+        /* Responsive */
+        @media (max-width:880px){
+            .hero{grid-template-columns:1fr}
+            header,main,footer{padding:12px}
+            nav a{display:none}
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a class="brand" href="#" aria-label="Sky Air Lines home">
+            <div class="logo" aria-hidden="true">SA</div>
+            <div>
+                <div style="font-weight:800">Sky Air Lines</div>
+                <div style="font-size:12px;color:var(--muted)">Fly with comfort</div>
+            </div>
+        </a>
+
+        <nav aria-label="Main navigation">
+            <a href="#" class="primary">Book</a>
+            <a href="#">Manage</a>
+            <a href="#">Check-in</a>
+            <a href="#">Support</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" aria-labelledby="welcome-heading">
+            <div class="hero-card">
+                <span class="badge" aria-hidden="true">New — Flexible fares</span>
+                <h1 id="welcome-heading">Welcome aboard. Discover your next journey.</h1>
+                <p class="lead">Search flights, compare fares, and manage your booking with Sky Air Lines. Safe, comfortable, and on time.</p>
+
+                <div class="features" aria-hidden="false">
+                    <div class="feature">
+                        <h4>Flexible Tickets</h4>
+                        <p>Free date changes on selected fares and simple rebooking options.</p>
+                    </div>
+                    <div class="feature">
+                        <h4>Priority Boarding</h4>
+                        <p>Fast-track boarding for families and premium passengers.</p>
+                    </div>
+                    <div class="feature">
+                        <h4>24/7 Support</h4>
+                        <p>Assistance any time by phone, chat, or at the airport.</p>
+                    </div>
+                </div>
+            </div>
+
+            <aside class="search-card" aria-label="Flight search">
+                <form id="searchForm" onsubmit="return handleSearch(event)" novalidate>
+                    <div class="row">
+                        <div style="flex:1">
+                            <label for="from">From</label>
+                            <input id="from" name="from" type="text" placeholder="City or airport" required aria-required="true">
+                        </div>
+                        <div style="flex:1">
+                            <label for="to">To</label>
+                            <input id="to" name="to" type="text" placeholder="City or airport" required aria-required="true">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div style="flex:1">
+                            <label for="depart">Depart</label>
+                            <input id="depart" name="depart" type="date" required>
+                        </div>
+                        <div style="flex:1">
+                            <label for="return">Return</label>
+                            <input id="return" name="return" type="date">
+                        </div>
+                    </div>
+
+                    <div class="row" style="align-items:end">
+                        <div style="flex:1">
+                            <label for="passengers">Passengers</label>
+                            <select id="passengers" name="passengers" aria-label="Number of passengers">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                            </select>
+                        </div>
+                        <div style="flex:1">
+                            <label for="cabin">Cabin</label>
+                            <select id="cabin" name="cabin" aria-label="Cabin class">
+                                <option>Economy</option>
+                                <option>Premium Economy</option>
+                                <option>Business</option>
+                                <option>First</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div style="display:flex;gap:10px;margin-top:12px;align-items:center;justify-content:space-between">
+                        <div style="display:flex;gap:8px;align-items:center">
+                            <input id="flex" name="flex" type="checkbox" style="width:16px;height:16px" />
+                            <label for="flex" class="muted" style="margin:0">Flexible dates</label>
+                        </div>
+
+                        <button class="btn" type="submit" aria-label="Search flights">Search flights</button>
+                    </div>
+                </form>
+
+                <p class="muted" style="margin-top:12px;font-size:13px">No payment needed to search. COVID-19 policies may apply.</p>
+            </aside>
+        </section>
+    </main>
+
+    <footer>
+        <div>© <strong>Sky Air Lines</strong> <span class="muted">— Travel responsibly</span></div>
+        <div style="display:flex;gap:12px">
+            <a href="#" class="muted">Privacy</a>
+            <a href="#" class="muted">Terms</a>
+            <a href="#" class="muted">Contact</a>
+        </div>
+    </footer>
+
+    <script>
+        function handleSearch(e){
+            e.preventDefault();
+            const from = document.getElementById('from').value.trim();
+            const to = document.getElementById('to').value.trim();
+            const depart = document.getElementById('depart').value;
+            if(!from || !to || !depart){
+                alert('Please enter origin, destination, and departure date.');
+                return false;
+            }
+            const passengers = document.getElementById('passengers').value;
+            const cabin = document.getElementById('cabin').value;
+            const flex = document.getElementById('flex').checked ? ' (Flexible dates)' : '';
+            // This demo does not submit — replace with integration to real search API.
+            alert(`Searching: ${from} → ${to}\nDepart: ${depart}\nPassengers: ${passengers}\nCabin: ${cabin}${flex}`);
+            return false;
+        }
+    </script>
+</body>
+</html>
