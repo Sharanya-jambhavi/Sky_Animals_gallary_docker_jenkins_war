@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Wild Indian Animals Gallery</title>
+    <style>
+        :root{
+            --bg:#8dc3dd;
+            --card:#fff;
+            --accent:#2b6cb0;
+            --muted:#6b7280;
+            --radius:12px;
+            font-family: system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+        }
+        body{
+            margin:0;
+            background:var(--bg);
+            color:#111;
+            line-height:1.4;
+        }
+        header{
+            padding:32px 20px;
+            text-align:center;
+            background:linear-gradient(90deg, rgba(43,108,176,0.08), rgba(43,108,176,0.02));
+            border-bottom:1px solid rgba(0,0,0,0.04);
+        }
+        header h1{ margin:0 0 6px; font-size:28px; letter-spacing:-0.4px; }
+        header p{ margin:0; color:var(--muted); }
+
+        main{ max-width:1100px; margin:28px auto; padding:0 18px 60px; }
+
+        .grid{
+            display:grid;
+            grid-template-columns: repeat(auto-fill,minmax(220px,1fr));
+            gap:18px;
+        }
+
+        .card{
+            background:var(--card);
+            border-radius:var(--radius);
+            box-shadow:0 6px 18px rgba(15,23,42,0.06);
+            overflow:hidden;
+            display:flex;
+            flex-direction:column;
+            transition:transform .18s ease,box-shadow .18s ease;
+        }
+        .card:hover{ transform:translateY(-6px); box-shadow:0 14px 36px rgba(15,23,42,0.12); }
+
+        .card img{
+            width:100%;
+            height:160px;
+            object-fit:cover;
+            display:block;
+        }
+        .card .body{
+            padding:12px 14px 16px;
+            flex:1;
+            display:flex;
+            flex-direction:column;
+            gap:8px;
+        }
+        .card h3{ margin:0; font-size:18px; }
+        .card p{ margin:0; color:var(--muted); font-size:14px; }
+
+        .tags{
+            margin-top:auto;
+            display:flex;
+            gap:8px;
+            flex-wrap:wrap;
+        }
+        .tag{
+            background:rgba(43,108,176,0.08);
+            color:var(--accent);
+            padding:6px 8px;
+            border-radius:999px;
+            font-size:12px;
+        }
+
+        footer{
+            max-width:1100px;
+            margin:20px auto 60px;
+            padding:0 18px;
+            color:var(--muted);
+            font-size:13px;
+            text-align:center;
+        }
+
+        @media (max-width:420px){
+            header{ padding:22px 12px; }
+            .card img{ height:140px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Wild Animals Gallery — India</h1>
+        <p>A simple static page showcasing wild animals found in India. Replace image files in images/ with your own photos.</p>
+    </header>
+
+    <main>
+        <section class="grid" aria-label="Gallery of Indian wild animals">
+            <article class="card">
+                <img src="https://tse1.mm.bing.net/th/id/OIP.FYXy8r-NwbNjSlhp2gob7QHaFj?pid=Api&P=0&h=180" alt="Asiatic lion in Gir">
+                <div class="body">
+                    <h3>Asiatic Lion</h3>
+                    <p>Surviving population found mainly in Gir Forest, Gujarat. Slightly smaller than African lions and lives in prides.</p>
+                    <div class="tags"><span class="tag">Panthera leo persica</span><span class="tag">Carnivore</span></div>
+                </div>
+            </article>
+
+            <article class="card">
+                <img src="https://tse4.mm.bing.net/th/id/OIP.cK74LFoNpqBW4F6JgJFvZwHaEK?pid=Api&P=0&h=180" alt="Bengal tiger in forest">
+                <div class="body">
+                    <h3>Bengal Tiger</h3>
+                    <p>India's national animal; apex predator found across diverse habitats including Sundarbans and central forests.</p>
+                    <div class="tags"><span class="tag">Panthera tigris tigris</span><span class="tag">Carnivore</span></div>
+                </div>
+            </article>
+
+            <article class="card">
+                <img src="https://tse3.mm.bing.net/th/id/OIP.VDRKTkofiVGjFDeuuv9_lwHaE7?pid=Api&P=0&h=180" alt="Indian elephant walking">
+                <div class="body">
+                    <h3>Indian Elephant</h3>
+                    <p>Smaller subspecies of Asian elephant common in Indian forests and grasslands, important for ecosystem function.</p>
+                    <div class="tags"><span class="tag">Elephas maximus indicus</span><span class="tag">Herbivore</span></div>
+                </div>
+            </article>
+
+            <article class="card">
+                <img src="https://www.worldatlas.com/r/w1200/upload/e4/04/f4/shutterstock-1497545270.jpg" alt="Indian leopard on a tree">
+                <div class="body">
+                    <h3>Indian Leopard</h3>
+                    <p>Adaptable and widespread big cat that occupies forests, grasslands, and even near human settlements.</p>
+                    <div class="tags"><span class="tag">Panthera pardus fusca</span><span class="tag">Carnivore</span></div>
+                </div>
+            </article>
+
+            <article class="card">
+                <img src="https://i.pinimg.com/originals/e7/0c/0e/e70c0eb1b065d1756600a87149633bd1.png" alt="Indian one-horned rhinoceros grazing">
+                <div class="body">
+                    <h3>Indian Rhinoceros</h3>
+                    <p>Also called the greater one-horned rhino; primarily found in Assam and nearby lowland areas.</p>
+                    <div class="tags"><span class="tag">Rhinoceros unicornis</span><span class="tag">Herbivore</span></div>
+                </div>
+            </article>
+
+            <article class="card">
+                <img src="https://www.zoo-leipzig.de/fileadmin/_processed_/3/5/csm_Lippenbaer_4_d7fddf19e7.jpg" alt="Sloth bear feeding on termites">
+                <div class="body">
+                    <h3>Sloth Bear</h3>
+                    <p>Nocturnal bear species native to the Indian subcontinent; feeds on termites, fruits, and honey.</p>
+                    <div class="tags"><span class="tag">Melursus ursinus</span><span class="tag">Insectivore/Omnivore</span></div>
+                </div>
+            </article>
+
+            <article class="card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Indian_Bison_Gobo.jpg/1280px-Indian_Bison_Gobo.jpg" alt="Gaur standing in forest">
+                <div class="body">
+                    <h3>Gaur (Indian Bison)</h3>
+                    <p>The largest wild cattle species, found in semi-evergreen and deciduous forests across India.</p>
+                    <div class="tags"><span class="tag">Bos gaurus</span><span class="tag">Herbivore</span></div>
+                </div>
+            </article>
+
+            <article class="card">
+                <img src="https://www.travelscopeindia.com/wp-content/uploads/2025/10/Snow-leopard-image-2.jpg" alt="Snow leopard on rocky terrain">
+                <div class="body">
+                    <h3>Snow Leopard</h3>
+                    <p>High-altitude big cat inhabiting the Himalayan ranges in northern India; elusive and well-camouflaged.</p>
+                    <div class="tags"><span class="tag">Panthera uncia</span><span class="tag">Carnivore</span></div>
+                </div>
+            </article>
+                <!--div class="body">
+                    <h3>Snow Leopard</h3>
+                    <p>High-altitude big cat inhabiting the Himalayan ranges in northern India; elusive and well-camouflaged.</p>
+                    <div class="tags"><span class="tag">Panthera uncia</span><span class="tag">Carnivore</span></div>
+        </div-->
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        Images: use files placed in an images/ folder (e.g., images/bengal-tiger.jpg) or replace src attributes with Wikimedia Commons URLs.
+    </footer>
+</body>
+</html>
